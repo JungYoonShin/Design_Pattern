@@ -1,27 +1,16 @@
-package practice.ch01;
+package practice.ch02;
 
 public class Main {
-	// ëª¨ë“  ìë°” í”„ë¡œê·¸ë¨ì€ main() ë©”ì†Œë“œë¶€í„° ì‹œì‘ëœë‹¤.
-    public static void main(String[] args) {
-    	BookShelf bookshelf1 = new BookShelf(4);
-    	
-    	bookshelf1.appendBook(new Book("í™ê¸¸ë™"));
-    	bookshelf1.appendBook(new Book("ì‹¬ì²­ì „"));
-    	bookshelf1.appendBook(new Book("í•´ë¹™"));
-    	bookshelf1.appendBook(new Book("ë‹¬ëŸ¬êµ¬íŠ¸ ê¿ˆ ë°±í™”ì "));
-    	
-    	Iterator i1 = bookshelf1.iterator();
-    	while(i1.hasNext()) {
-    		Book book = (Book)i1.next();
-    		System.out.println(book.getName());
-    		
-    		
-    	}
-    	
-    }
+	public static void main(String[] args) {
+		// p´Â Print ÀÎÅÍÆäÀÌ½º ÇüÀ¸·Î ¼±¾ğµÇ¾ú°í,
+		// ½ÇÁ¦·Î´Â PrintBanner °´Ã¼¸¦ »ı¼ºÇÏ¿© °¡¸®Å²´Ù.
+		// Print°¡ PrintBannerÀÇ ºÎ¸ğÀÌ¹Ç·Î °¡´ÉÇÏ´Ù.
+		Print p = new PrintBanner("Hello");
+
+		// ½ÇÁ¦ ÀÏÀ» ¼öÇàÇÏ´Â Banner Å¬·¡½ºÀÇ ¸Ş¼Òµå´Â,
+		// Main Å¬·¡½º¿¡¼­´Â ¿ÏÀüÈ÷ ÀºÆóµÇ¾î ÀÖ´Ù.
+		p.printWeak();
+		p.printStrong();
+
+	}
 }
-
-
-
-
-
